@@ -1,1 +1,23 @@
-Test
+OPEN SOURCE DCXP IMPLEMENTATION
+Research project implementing a open source DCXP solution for the MediaSence-framework.
+
+Collaborators:
+ Jonas Bäckström (https://github.com/sidsjobackis)
+ Henrik Hagsved (https://github.com/)
+
+Deparment of Information Technology and Media, 
+Mid Sweden University 
+www.miun.se/en/itm
+
+MediaSence: http://www.miun.se/en/Forskning/Var-forskning/forskargrupper/SR/Forskning/Sensorbaserade-tjanster/Media-Sense/
+
+*** INTRODUCTION ***
+In a near future the amount of sensors linked to electronical equipment will increase rapidly and thus also the need for distributing this new information to consuming applications and systems. In such an environment a centralized solutions is not applicable due to the massive amount of connecting nodes, which would bring any centralized server to its knees. This is where a real-time distributed system of context information with DCXP is a possible solutions - which we know from earlier research - performs better than other available solutions. [1][2][3]
+
+The purpose of this project is to create a fully open-source solution without depending libraries. In addition the research-team’s current solutions are lacking certain core features or are not fully distributed and are thus inappropriate to use as bottom layer in a big scale system.
+
+
+*** REFERENCES ***
+[1] Theo Kanter, Patrik Österberg, Jamie Walters, Victor Kardeby, Stefan Forsström and Stefan Pettersson, "The mediasence framework", In Processings of 4th IARIA International Converence of Digital Telecommunications (ICDT). Colmar, France, July 2009.
+[2] Theo Kanter, Stefan Forsström, Victor Kardeby, Jamie Walters, Patrik Österberg and Stefan Pettersson, "Chapter 16: Ubiquitous Mobile Awareness from Sensor Networks", Enabling Context-Aware Web Services Methods, Architectures, and Technologies Edited by Quan Z. Sheng , Jian Yu and Schahram Dustdar, Pages 449–468. Chapman and Hall/CRC, 2010.
+[3] Theo Kanter, Stefan Pettersson, Stefan Forsström, Victor Kardeby, Roger Norlin, Jamie Walters, Patrik Österberg, "Distributed Context Support for biquitous Mobile Awareness Service", Fourth International Conference on Communications and Networking in China. ChinaCOM, 2009.
