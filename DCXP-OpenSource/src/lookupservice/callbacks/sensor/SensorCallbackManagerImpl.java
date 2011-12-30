@@ -1,11 +1,6 @@
 package lookupservice.callbacks.sensor;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Hashtable;
-
 import lookupservice.callbacks.container.CallbackMultimap;
-
 import dcxp.callbacks.Callback;
 
 /**
