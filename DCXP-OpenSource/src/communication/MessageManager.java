@@ -5,7 +5,7 @@ package communication;
  * 			Institution of Information Technology and Media
  * 			Mid Sweden University
  *
- * @Comment 
+ * @Comment This interface determines how the message sending is to be done
  */
 public interface MessageManager {
 	
@@ -14,7 +14,7 @@ public interface MessageManager {
 	 * @param receivingCUA
 	 * @param message
 	 */
-	public void sendMessage( String receivingCUA, Message message );
+	public void sendMessage( CUA receivingCUA, Message message );
 	
 	
 	/**
@@ -25,7 +25,7 @@ public interface MessageManager {
 	 * @param data
 	 * @return
 	 */
-	public Message createMessage( short messageID, String type, String sendingCUA, String data );
+	public Message createMessage( short messageID, String type, CUA sendingCUA, String data );
 	
 	
 	/**

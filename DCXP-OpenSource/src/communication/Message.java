@@ -5,16 +5,16 @@ package communication;
  * 			Institution of Information Technology and Media
  * 			Mid Sweden University
  *
- * @Comment 
+ * @Comment This object contains the required information for sending messages
  */
 public class Message {
 
 	private short messageID;
 	private String type;
-	private String sendingCUA;
+	private CUA sendingCUA;
 	private String data;
 	
-	public Message(short messageID, String type, String sendingCUA, String data) {
+	public Message(short messageID, String type, CUA sendingCUA, String data) {
 		this.messageID = messageID;
 		this.type = type;
 		this.sendingCUA = sendingCUA;
@@ -38,7 +38,7 @@ public class Message {
 	/**
 	 * @return the sendingCUA
 	 */
-	public String getSendingCUA() {
+	public CUA getSendingCUA() {
 		return sendingCUA;
 	}
 
