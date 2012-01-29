@@ -1,5 +1,7 @@
 package lookupservice.dht;
 
+import communication.CUA;
+
 
 /**
  * @author 	Jonas Bäckström & Henrik Hagsved
@@ -22,7 +24,7 @@ public interface DHTFacade {
 	 * @param UCI
 	 * @return
 	 */
-	public String resolve( String UCI );
+	public CUA resolve( String UCI );
 	
 	
 	/**
@@ -36,6 +38,6 @@ public interface DHTFacade {
 	 * @param ip
 	 * @param port
 	 */
-	public void join( String ip, String port );
+	public void join( String ip, int port );
 	
 }

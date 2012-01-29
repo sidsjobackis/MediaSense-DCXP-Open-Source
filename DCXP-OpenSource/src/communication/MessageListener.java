@@ -20,7 +20,7 @@ public class MessageListener {
 	 * @param URI
 	 * @param port
 	 */
-	public MessageListener(String URI, int port) {
+	public MessageListener(String URI, int port, MessageManagerImpl msgManager) {
 		ServerSocket serverSocket = null;
 		boolean listening = true;
 		try{
@@ -31,7 +31,7 @@ public class MessageListener {
 		}
 		try{
 			while(listening){
-				new MessageListenerThread(serverSocket.accept()).start();
+				new MessageListenerThread(serverSocket.accept(),msgManager).start();
 			}
 			serverSocket.close();
 		}

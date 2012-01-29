@@ -1,5 +1,8 @@
 package dcxp;
 
+import communication.CUA;
+import communication.MessageManagerImpl;
+
 /**
  * @author 	Jonas Bäckström & Henrik Hagsved
  * 			Institution of Information Technology and Media
@@ -16,6 +19,7 @@ public interface GetManager {
 	 * 
 	 * @param UCI
 	 */
-	public void get( String UCI );
+	public void get( String UCI, CUA sendingCUA, MessageManagerImpl communicationHandler );
 	
+	public void getListener();
 }

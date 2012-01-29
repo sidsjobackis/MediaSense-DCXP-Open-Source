@@ -3,6 +3,8 @@
  */
 package communication;
 
+import java.util.ArrayList;
+
 import communication.serializer.MessageSerializerImpl;
 
 /**
@@ -11,13 +13,19 @@ import communication.serializer.MessageSerializerImpl;
  * 			Mid Sweden University
  *
  * @Comment This class implements the MessageManager interface
- * 			A new message is assigned a messageID, converted inte a message object
+ * 			A new message is assigned a messageID, converted into a message object
  * 			and sent in a new thread
+ * 			
+ * 			setLatestMessage needs to be synchronized
  */
 public class MessageManagerImpl implements MessageManager {
 	private String messageToSend;
 	private CUA receivingCUA;
-	private short messageID;
+	private short messageID = 0;
+	private ArrayList<Message> messageQueue;
+	private int index = 0;
+	
+	
 	MessageSerializerImpl msgSrl = new MessageSerializerImpl();
 	/**
 	 * This function starts a new thread that handles the sending of the message
@@ -59,6 +67,20 @@ public class MessageManagerImpl implements MessageManager {
 			messageID = 11;
 		}
 		return result;
+	}
+	
+	public Message getLatestMessage() {
+		return messageQueue.get(index);
+	}
+	
+	// This method needs to be made synchronized
+	public void setLatestMessage(Message latestMessage) {
+		messageQueue.add(index, latestMessage);
+		index++;
+	}
+	
+	public void clearMessageQueue() {
+		index = 0;
 	}
 
 }

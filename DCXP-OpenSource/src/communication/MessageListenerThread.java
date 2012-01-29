@@ -17,10 +17,11 @@ import java.io.*;
 public class MessageListenerThread extends Thread{
 	
 	private Socket socket = null;
-	@SuppressWarnings("unused")
 	private Message message = null;
-	public MessageListenerThread(Socket socket){
+	private MessageManagerImpl msgManager = null;
+	public MessageListenerThread(Socket socket, MessageManagerImpl msgManager){
 		this.socket = socket;
+		this.msgManager = msgManager;
 	}
 	
 	/**
@@ -36,6 +37,7 @@ public class MessageListenerThread extends Thread{
 			
 			while((inputline = in.readLine()) != null){
 				message = new MessageSerializerImpl().deserializeMessage(inputline);
+				msgManager.setLatestMessage(message);
 			}
 			out.close();
 			in.close();

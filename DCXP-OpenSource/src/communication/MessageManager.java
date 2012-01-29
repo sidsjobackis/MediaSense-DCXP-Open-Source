@@ -34,4 +34,13 @@ public interface MessageManager {
 	 */
 	public short getMessageID();
 	
+	
+	public Message getLatestMessage();
+	
+	// This method needs to be made synchronized
+	public void setLatestMessage(Message latestMessage);
+	
+	public void clearMessageQueue();
+
+	
 }

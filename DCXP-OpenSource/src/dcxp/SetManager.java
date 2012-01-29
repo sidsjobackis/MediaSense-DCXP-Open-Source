@@ -1,5 +1,8 @@
 package dcxp;
 
+import communication.CUA;
+import communication.MessageManagerImpl;
+
 /**
  * @author 	Jonas Bäckström & Henrik Hagsved
  * 			Institution of Information Technology and Media
@@ -16,6 +19,6 @@ public interface SetManager {
 	 * @param UCI
 	 * @param value
 	 */
-	public void set( String UCI, String value );
+	public void set( String UCI, String value, CUA sendingCUA, MessageManagerImpl communicationHandler );
 	
 }
