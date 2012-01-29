@@ -33,4 +33,17 @@ public class Testclass {
 		dcxp1.GET( "uci://test2@miun.se/test2");
 	}
 
+	/*
+	When a new Message is placed in the ArrayList, the listeners are triggered to check the new Message.
+	NotifyGetListener - of which there are one per sent out Get request - check if the Message’s MessageID 
+	is equal to the ID set in the listener, notifySubscribeListeners check if the Message’s MessageID is 
+	equal to the specific subscribe ID of 1, getHandler (listens to get requests from the outside) checks 
+	the type of the Message to see if it’s GET, setHandler checks the type of the Message to see if it’s SET.
+	A listener that finds a match will use the data in the Message and the callbacks to send the appropriate 
+	information to the right place.
+
+	Overview of this can be seen in the project report [p.19, section 4.3.4]
+
+	*/
+	
 }
